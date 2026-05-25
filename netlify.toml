@@ -1,0 +1,50 @@
+# Netlify configuration for Dynamic Health Care
+# Static site — no build step required.
+
+[build]
+  publish = "."
+
+# Friendly URLs: serve `about.html` when the user visits `/about`
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/general-medicine"
+  to = "/general-medicine.html"
+  status = 200
+
+[[redirects]]
+  from = "/gynaecology"
+  to = "/gynaecology.html"
+  status = 200
+
+[[redirects]]
+  from = "/neurology"
+  to = "/neurology.html"
+  status = 200
+
+[[redirects]]
+  from = "/home-care"
+  to = "/home-care.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog"
+  to = "/blog.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+# Standard security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"

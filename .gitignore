@@ -1,0 +1,26 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies (none used, but precautionary)
+node_modules/
+
+# Environment files (in case any are ever added)
+.env
+.env.*
+!.env.example
+
+# Build output (none, but precautionary)
+dist/
+build/
+
+# Local Netlify state if you run netlify-cli
+.netlify/

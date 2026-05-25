@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dynamic Health Care — Trusted Multi-Specialty Clinic in Mogappair, Chennai</title>
+  <meta name="description" content="Dynamic Health Care is a multi-specialty clinic in Mogappair offering General & Emergency Medicine, Gynaecology, Neurology, and home care services across Chennai." />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ==========================================================
+       SHARED HEADER: emergency bar + sticky nav + mobile menu
+       Copy verbatim onto every other page (only the .is-active
+       class on .nav__link is added automatically by JS).
+       ========================================================== -->
+  <header class="site-header">
+    <div class="emergency-bar">
+      <span class="pulse-dot" aria-hidden="true"></span>
+      Emergency? Call us:
+      <a href="tel:+919600123463">96001 23463</a> |
+      <a href="tel:+917397391156">73973 91156</a>
+    </div>
+    <nav class="nav" aria-label="Primary">
+      <div class="container nav__inner">
+        <a href="index.html" class="logo" aria-label="Dynamic Health Care home">
+          <img src="assets/images/logo.png" class="logo__img" alt="Dynamic Health Care logo" />
+          <span class="logo__text">Dynamic Health Care</span>
+        </a>
+
+        <ul class="nav__menu">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="about.html">About</a></li>
+          <li>
+            <a class="nav__link has-dropdown" href="#" aria-haspopup="true">Specialists</a>
+            <ul class="dropdown">
+              <li><a href="general-medicine.html">General Medicine</a></li>
+              <li><a href="gynaecology.html">Gynaecology</a></li>
+              <li><a href="neurology.html">Neurology</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="nav__link has-dropdown" href="home-care.html" aria-haspopup="true">Home Care</a>
+            <ul class="dropdown">
+              <li><a href="home-care.html#equipment">Medical Equipment</a></li>
+              <li><a href="home-care.html#investigations">Investigations</a></li>
+              <li><a href="home-care.html#pharmacy">Pharmacy</a></li>
+            </ul>
+          </li>
+          <li><a class="nav__link" href="blog.html">Blog</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <a href="contact.html#appointment-form" class="btn btn--primary nav__cta">Book Appointment</a>
+
+        <button class="nav__hamburger" aria-label="Open menu" aria-controls="mobileMenu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mobile-menu__overlay" aria-hidden="true"></div>
+  <aside id="mobileMenu" class="mobile-menu" aria-label="Mobile menu">
+    <button class="mobile-menu__close" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="6" y1="18" x2="18" y2="6"/></svg>
+    </button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li>
+        <a href="#" class="has-dropdown">Specialists</a>
+        <ul>
+          <li><a href="general-medicine.html">General Medicine</a></li>
+          <li><a href="gynaecology.html">Gynaecology</a></li>
+          <li><a href="neurology.html">Neurology</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="home-care.html" class="has-dropdown">Home Care</a>
+        <ul>
+          <li><a href="home-care.html#equipment">Medical Equipment</a></li>
+          <li><a href="home-care.html#investigations">Investigations</a></li>
+          <li><a href="home-care.html#pharmacy">Pharmacy</a></li>
+        </ul>
+      </li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html#appointment-form" style="color: var(--teal-dark); font-weight: 600;">Book Appointment &rarr;</a></li>
+    </ul>
+  </aside>
+
+  <main>
+
+    <!-- =====================================================
+         SECTION 1 - Hero slider
+         ===================================================== -->
+    <section class="hero-slider" aria-label="Featured services">
+      <article class="hero-slide hero-slide--1 is-active" style="background-image: url('assets/images/hero-gynae.jpg');">
+        <!-- REPLACE: hero-gynae.jpg with a real photo of the gynaecology service/team -->
+        <div class="hero-slide__overlay"></div>
+        <div class="hero-slide__content">
+          <h1>Expert Women's Care, Every Step of the Way</h1>
+          <p>From prenatal care to menopause management — we're with you.</p>
+          <a href="gynaecology.html" class="btn btn--primary">Explore Gynaecology</a>
+        </div>
+      </article>
+      <article class="hero-slide hero-slide--2" style="background-image: url('assets/images/hero-general.jpg');">
+        <!-- REPLACE: hero-general.jpg with a real photo of the clinic / general medicine -->
+        <div class="hero-slide__overlay"></div>
+        <div class="hero-slide__content">
+          <h1>Your Family's Trusted Healthcare Partner</h1>
+          <p>Comprehensive diagnosis and personalised treatment for every age.</p>
+          <a href="contact.html#appointment-form" class="btn btn--primary">Book a Consultation</a>
+        </div>
+      </article>
+      <article class="hero-slide hero-slide--3" style="background-image: url('assets/images/hero-neuro.jpg');">
+        <!-- REPLACE: hero-neuro.jpg with a real photo of neurology equipment / consultation -->
+        <div class="hero-slide__overlay"></div>
+        <div class="hero-slide__content">
+          <h1>Advanced Neurology Care in Chennai</h1>
+          <p>Stroke care, epilepsy programs, and neurological diagnostics under one roof.</p>
+          <a href="neurology.html" class="btn btn--primary">Explore Neurology</a>
+        </div>
+      </article>
+      <div class="slider-dots" aria-hidden="true"></div>
+      <button class="slider-arrow slider-arrow--prev" aria-label="Previous slide">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="slider-arrow slider-arrow--next" aria-label="Next slide">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </section>
+
+    <!-- =====================================================
+         SECTION 2 - Trust bar / stats
+         ===================================================== -->
+    <section class="section--tight section--pale" aria-label="Clinic stats">
+      <div class="container">
+        <div class="stats-row reveal">
+          <div class="stat">
+            <span class="stat__num" data-count="5" data-suffix="+ Years">0</span>
+            <span class="stat__label">Of trusted healthcare</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="3" data-suffix=" Specialists">0</span>
+            <span class="stat__label">Expert doctors on team</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="10000" data-suffix="+ Patients">0</span>
+            <span class="stat__label">Families served</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num" data-count="13" data-suffix=" Diagnostics">0</span>
+            <span class="stat__label">In-house tests available</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SECTION 3 - About teaser
+         ===================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="two-col reveal">
+          <div class="framed-image">
+            <img src="assets/images/about-team.jpg" alt="Dynamic Health Care doctors and staff" loading="lazy" />
+            <!-- REPLACE: about-team.jpg with a real team photo -->
+          </div>
+          <div>
+            <span class="section-label">Who we are</span>
+            <h2>Trusted Specialist Care for Chennai Families</h2>
+            <p>Located in the heart of Mogappair, Dynamic Health Care has been a trusted name in healthcare for over five years. We combine specialist expertise in Emergency Medicine, Gynaecology, and Neurology with in-house diagnostics and home care services — all designed around your convenience and wellbeing.</p>
+            <ul class="tick-list">
+              <li>Patient-first approach</li>
+              <li>Experienced specialist doctors</li>
+              <li>In-house diagnostics &amp; pharmacy</li>
+            </ul>
+            <a href="about.html" class="btn btn--primary">Our Story</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SECTION 4 - Services / Specialties cards
+         ===================================================== -->
+    <section class="section section--off">
+      <div class="container">
+        <div class="text-center reveal">
+          <h2>Our Specialties</h2>
+          <p class="section-subtitle">Comprehensive care across three key disciplines</p>
+        </div>
+
+        <div class="grid grid--4 reveal">
+          <article class="service-card">
+            <img src="assets/images/service-general.jpg" alt="General medicine consultation" loading="lazy" />
+            <!-- REPLACE: service-general.jpg with a photo of a consultation room -->
+            <div class="service-card__body">
+              <span class="service-card__icon" aria-hidden="true">
+                <!-- stethoscope -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 3v6a4 4 0 0 0 8 0V3"/><path d="M8 13v3a5 5 0 0 0 10 0v-2"/><circle cx="18" cy="11" r="2"/></svg>
+              </span>
+              <h3>General &amp; Emergency Medicine</h3>
+              <p>Diagnosis and treatment of internal diseases, acute care and emergency management.</p>
+              <a href="general-medicine.html" class="link-arrow">Learn More</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="assets/images/service-gynae.jpg" alt="Gynaecology services" loading="lazy" />
+            <!-- REPLACE: service-gynae.jpg with a women's health-themed photo -->
+            <div class="service-card__body">
+              <span class="service-card__icon" aria-hidden="true">
+                <!-- female symbol -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><line x1="12" y1="14" x2="12" y2="22"/><line x1="9" y1="19" x2="15" y2="19"/></svg>
+              </span>
+              <h3>Gynaecology &amp; Obstetrics</h3>
+              <p>Complete women's healthcare from pre-pregnancy to post-delivery and beyond.</p>
+              <a href="gynaecology.html" class="link-arrow">Learn More</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="assets/images/service-neuro.jpg" alt="Neurology services" loading="lazy" />
+            <!-- REPLACE: service-neuro.jpg with a neurology / brain-imaging photo -->
+            <div class="service-card__body">
+              <span class="service-card__icon" aria-hidden="true">
+                <!-- brain outline -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4a3 3 0 0 0-3 3v1a3 3 0 0 0-2 3v2a3 3 0 0 0 2 3v1a3 3 0 0 0 3 3M15 4a3 3 0 0 1 3 3v1a3 3 0 0 1 2 3v2a3 3 0 0 1-2 3v1a3 3 0 0 1-3 3M9 4v16M15 4v16"/></svg>
+              </span>
+              <h3>Advanced Neurology</h3>
+              <p>Specialist care for stroke, epilepsy, movement disorders and the full nervous system.</p>
+              <a href="neurology.html" class="link-arrow">Learn More</a>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="assets/images/service-homecare.jpg" alt="Home care services" loading="lazy" />
+            <!-- REPLACE: service-homecare.jpg with a home-visit / care photo -->
+            <div class="service-card__body">
+              <span class="service-card__icon" aria-hidden="true">
+                <!-- house with cross -->
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8v10a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/><line x1="12" y1="10" x2="12" y2="16"/><line x1="9" y1="13" x2="15" y2="13"/></svg>
+              </span>
+              <h3>Home Care Services</h3>
+              <p>Medical equipment, pharmacy delivery, and diagnostic tests at your doorstep.</p>
+              <a href="home-care.html" class="link-arrow">Learn More</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SECTION 5 - In-house diagnostic services
+         ===================================================== -->
+    <section class="section section--off">
+      <div class="container">
+        <div class="text-center reveal">
+          <h2>In-House Diagnostic Facilities</h2>
+          <p class="section-subtitle">Accurate results without leaving our clinic</p>
+        </div>
+        <div class="diag-pills reveal">
+          <span class="diag-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h3l2-7 4 14 2-7h7"/></svg>Sleep Study</span>
+          <span class="diag-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h3l2-7 4 14 2-7h7"/></svg>EEG (Electroencephalogram)</span>
+          <span class="diag-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h3l2-7 4 14 2-7h7"/></svg>EMG (Electromyogram)</span>
+          <span class="diag-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h3l2-7 4 14 2-7h7"/></svg>NCS (Nerve Conduction Study)</span>
+          <span class="diag-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h3l2-7 4 14 2-7h7"/></svg>BiPAP / CPAP</span>
+          <span class="diag-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h3l2-7 4 14 2-7h7"/></svg>24hr Ambulatory BP Monitor</span>
+          <span class="diag-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h3l2-7 4 14 2-7h7"/></svg>Pulmonary Function Test</span>
+          <span class="diag-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h3l2-7 4 14 2-7h7"/></svg>24hr Holter Monitor</span>
+          <span class="diag-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h3l2-7 4 14 2-7h7"/></svg>Audiometry</span>
+        </div>
+        <p class="diag-note">All investigations are performed by trained technicians and reviewed by our specialist doctors.</p>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SECTION 6 - Meet Our Doctors
+         ===================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center reveal">
+          <h2>Meet Our Doctors</h2>
+          <p class="section-subtitle">Experienced specialists committed to your health</p>
+        </div>
+
+        <div class="grid grid--3 reveal">
+          <article class="doctor-card">
+            <img class="doctor-card__photo" src="assets/images/dr-prithviraj.jpg" alt="Dr. R. Prithviraj" loading="lazy" />
+            <!-- REPLACE: dr-prithviraj.jpg with a real portrait of Dr. R. Prithviraj -->
+            <h3>Dr. R. Prithviraj</h3>
+            <span class="doctor-card__creds">M.B.B.S., M.E.M.</span>
+            <span class="doctor-card__badge">General &amp; Emergency Medicine</span>
+            <p>Founder of Dynamic Health Care and a specialist in emergency and general internal medicine, bringing compassionate care to every consultation.</p>
+            <a href="contact.html#appointment-form" class="btn btn--outline">Book Appointment</a>
+          </article>
+
+          <article class="doctor-card">
+            <img class="doctor-card__photo" src="assets/images/dr-priyanka.jpg" alt="Dr. S.V. Priyanka" loading="lazy" />
+            <!-- REPLACE: dr-priyanka.jpg with a real portrait of Dr. S.V. Priyanka -->
+            <h3>Dr. S.V. Priyanka</h3>
+            <span class="doctor-card__creds">M.B.B.S., M.S.(OBG), R.C.D.</span>
+            <span class="doctor-card__badge">Gynaecologist &amp; Obstetric Surgeon</span>
+            <p>Expert in women's health, pregnancy care, infertility, and minimally invasive gynaecological surgery.</p>
+            <a href="contact.html#appointment-form" class="btn btn--outline">Book Appointment</a>
+          </article>
+
+          <article class="doctor-card">
+            <img class="doctor-card__photo" src="assets/images/dr-subramanian.jpg" alt="Dr. K. Sankara Subramanian" loading="lazy" />
+            <!-- REPLACE: dr-subramanian.jpg with a real portrait of Dr. K. Sankara Subramanian -->
+            <h3>Dr. K. Sankara Subramanian</h3>
+            <span class="doctor-card__creds">M.D., D.M. (Neurology)</span>
+            <span class="doctor-card__badge">Consultant Neurologist</span>
+            <p>Specialist in stroke management, epilepsy, and neuromuscular disorders with extensive clinical experience.</p>
+            <a href="contact.html#appointment-form" class="btn btn--outline">Book Appointment</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SECTION 7 - Home care highlight band
+         ===================================================== -->
+    <section class="homecare-band">
+      <div class="container">
+        <div class="two-col reveal">
+          <div>
+            <h2>Healthcare Delivered to Your Home</h2>
+            <p>Through Creative Home Care, we extend the clinic to your doorstep.</p>
+
+            <div class="feature-row">
+              <span class="feature-row__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="6" rx="3"/><line x1="12" y1="9" x2="12" y2="15"/></svg>
+              </span>
+              <div>
+                <h4>Medicine Delivery</h4>
+                <p>Prescription &amp; OTC medicines delivered across Chennai.</p>
+              </div>
+            </div>
+            <div class="feature-row">
+              <span class="feature-row__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3v9a3 3 0 1 0 6 0V3"/><line x1="8" y1="3" x2="18" y2="3"/></svg>
+              </span>
+              <div>
+                <h4>Home Diagnostic Tests</h4>
+                <p>Blood draw and bedside investigations at your home.</p>
+              </div>
+            </div>
+            <div class="feature-row">
+              <span class="feature-row__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><path d="M11 18h4l-2-9H7l-2 4"/></svg>
+              </span>
+              <div>
+                <h4>Medical Equipment on Rent</h4>
+                <p>Oxygen concentrators, beds, wheelchairs, BiPAP and more.</p>
+              </div>
+            </div>
+
+            <a href="home-care.html" class="btn btn--gold mt-md">Explore Home Care</a>
+          </div>
+
+          <div>
+            <!-- house with cross illustration, white line-art -->
+            <svg class="house-illustration" viewBox="0 0 320 240" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M40 130 L160 40 L280 130 V210 H40 Z"/>
+              <path d="M120 210 V160 H200 V210"/>
+              <rect x="80" y="150" width="32" height="32" rx="2"/>
+              <rect x="208" y="150" width="32" height="32" rx="2"/>
+              <g stroke="#E8A838" stroke-width="6">
+                <line x1="160" y1="175" x2="160" y2="200"/>
+                <line x1="148" y1="187.5" x2="172" y2="187.5"/>
+              </g>
+              <path d="M30 130 L290 130" stroke-dasharray="4 6" opacity="0.5"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SECTION 8 - Blog preview
+         ===================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center reveal">
+          <h2>Health Insights</h2>
+          <p class="section-subtitle">Advice and education from our doctors</p>
+        </div>
+
+        <div class="grid grid--4 reveal">
+          <article class="blog-card">
+            <a href="blog-sleep.html">
+              <img src="assets/images/blog-sleep.jpg" alt="Sleep article cover" loading="lazy" />
+            </a>
+            <!-- REPLACE: blog-sleep.jpg -->
+            <div class="blog-card__body">
+              <span class="category-badge category-badge--sleep">Sleep Health</span>
+              <h3>Why Sleep Is Medicine</h3>
+              <p>Understanding sleep disorders, what a sleep study really shows, and how we treat them.</p>
+              <a href="blog-sleep.html" class="link-arrow">Read More</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <a href="blog-general-medicine.html">
+              <img src="assets/images/blog-general.jpg" alt="Hypertension article cover" loading="lazy" />
+            </a>
+            <!-- REPLACE: blog-general.jpg -->
+            <div class="blog-card__body">
+              <span class="category-badge category-badge--general">General Medicine</span>
+              <h3>Hypertension: The Silent Danger</h3>
+              <p>Why high blood pressure is called the "silent killer" — and what you can do about it.</p>
+              <a href="blog-general-medicine.html" class="link-arrow">Read More</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <a href="blog-gynaecology.html">
+              <img src="assets/images/blog-gynae.jpg" alt="PCOS article cover" loading="lazy" />
+            </a>
+            <!-- REPLACE: blog-gynae.jpg -->
+            <div class="blog-card__body">
+              <span class="category-badge category-badge--gynae">Gynaecology</span>
+              <h3>PCOS Decoded</h3>
+              <p>What every woman should know about Polycystic Ovary Syndrome — symptoms, risks, and treatment.</p>
+              <a href="blog-gynaecology.html" class="link-arrow">Read More</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <a href="blog-neurology.html">
+              <img src="assets/images/blog-neuro.jpg" alt="Stroke article cover" loading="lazy" />
+            </a>
+            <!-- REPLACE: blog-neuro.jpg -->
+            <div class="blog-card__body">
+              <span class="category-badge category-badge--neuro">Neurology</span>
+              <h3>Recognising a Stroke</h3>
+              <p>The FAST method and why every minute counts when a stroke strikes.</p>
+              <a href="blog-neurology.html" class="link-arrow">Read More</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SECTION 8.5 - Clinic photo carousel
+         To replace photos: drop new JPGs into assets/images/carousel/
+         with the same filenames (carousel-1.jpg ... carousel-10.jpg).
+         See assets/images/carousel/README.md for guidance.
+         ===================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="text-center reveal">
+          <h2>A Look Inside Our Clinic</h2>
+          <p class="section-subtitle">Photos of our team, facilities, and care in action.</p>
+        </div>
+
+        <div class="image-carousel reveal" aria-label="Clinic photo gallery">
+          <article class="carousel-slide is-active" style="background-image: url('assets/images/carousel/carousel-1.jpg');" role="img" aria-label="Clinic photo 1"></article>
+          <article class="carousel-slide" style="background-image: url('assets/images/carousel/carousel-2.jpg');" role="img" aria-label="Clinic photo 2"></article>
+          <article class="carousel-slide" style="background-image: url('assets/images/carousel/carousel-3.jpg');" role="img" aria-label="Clinic photo 3"></article>
+          <article class="carousel-slide" style="background-image: url('assets/images/carousel/carousel-4.jpg');" role="img" aria-label="Clinic photo 4"></article>
+          <article class="carousel-slide" style="background-image: url('assets/images/carousel/carousel-5.jpg');" role="img" aria-label="Clinic photo 5"></article>
+          <article class="carousel-slide" style="background-image: url('assets/images/carousel/carousel-6.jpg');" role="img" aria-label="Clinic photo 6"></article>
+          <article class="carousel-slide" style="background-image: url('assets/images/carousel/carousel-7.jpg');" role="img" aria-label="Clinic photo 7"></article>
+          <article class="carousel-slide" style="background-image: url('assets/images/carousel/carousel-8.jpg');" role="img" aria-label="Clinic photo 8"></article>
+          <article class="carousel-slide" style="background-image: url('assets/images/carousel/carousel-9.jpg');" role="img" aria-label="Clinic photo 9"></article>
+          <article class="carousel-slide" style="background-image: url('assets/images/carousel/carousel-10.jpg');" role="img" aria-label="Clinic photo 10"></article>
+
+          <div class="slider-dots" aria-hidden="true"></div>
+          <button class="slider-arrow slider-arrow--prev" aria-label="Previous photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="slider-arrow slider-arrow--next" aria-label="Next photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SECTION 8.75 - Testimonials
+         EDIT INSTRUCTIONS:
+           To add, remove, or change a testimonial, edit the
+           <article class="testimonial"> blocks below. Copy any
+           one block and change the quote, name, and role to
+           add a new testimonial.
+         ===================================================== -->
+    <section class="section section--off testimonials-section">
+      <div class="container">
+        <div class="text-center reveal">
+          <h2>What Our Patients Say</h2>
+          <p class="section-subtitle">Real stories from families we've cared for.</p>
+        </div>
+
+        <div class="grid grid--3 reveal">
+
+          <!-- ====== TESTIMONIAL 1 ====== -->
+          <article class="testimonial">
+            <svg class="testimonial__mark" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M6 22V14c0-3.3 2.7-6 6-6v3c-1.7 0-3 1.3-3 3v2h3v6H6zm12 0V14c0-3.3 2.7-6 6-6v3c-1.7 0-3 1.3-3 3v2h3v6h-6z"/></svg>
+            <div class="testimonial__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial__quote">"Dr. Prithviraj listened so patiently when my father came in with breathlessness and chest pain. The diagnosis and treatment were on point and my father is back to his morning walks. This is the kind of doctor we always wished for."</p>
+            <strong class="testimonial__name">Rajesh Kumar</strong>
+            <span class="testimonial__role">General Medicine · Mogappair</span>
+          </article>
+
+          <!-- ====== TESTIMONIAL 2 ====== -->
+          <article class="testimonial">
+            <svg class="testimonial__mark" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M6 22V14c0-3.3 2.7-6 6-6v3c-1.7 0-3 1.3-3 3v2h3v6H6zm12 0V14c0-3.3 2.7-6 6-6v3c-1.7 0-3 1.3-3 3v2h3v6h-6z"/></svg>
+            <div class="testimonial__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial__quote">"Dr. Priyanka guided me through my high-risk pregnancy with such warmth and confidence. Every scan, every visit she made me feel heard. My daughter is now eight months old and healthy &mdash; we are forever grateful."</p>
+            <strong class="testimonial__name">Lakshmi Venkatesh</strong>
+            <span class="testimonial__role">Gynaecology &amp; Obstetrics</span>
+          </article>
+
+          <!-- ====== TESTIMONIAL 3 ====== -->
+          <article class="testimonial">
+            <svg class="testimonial__mark" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M6 22V14c0-3.3 2.7-6 6-6v3c-1.7 0-3 1.3-3 3v2h3v6H6zm12 0V14c0-3.3 2.7-6 6-6v3c-1.7 0-3 1.3-3 3v2h3v6h-6z"/></svg>
+            <div class="testimonial__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial__quote">"My mother had a mini-stroke last year. Dr. Subramanian acted quickly, explained every step, and put us at ease. His follow-up programme has kept her stable for months. We trust him completely."</p>
+            <strong class="testimonial__name">Arun Subramaniam</strong>
+            <span class="testimonial__role">Neurology · Anna Nagar</span>
+          </article>
+
+          <!-- ====== TESTIMONIAL 4 ====== -->
+          <article class="testimonial">
+            <svg class="testimonial__mark" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M6 22V14c0-3.3 2.7-6 6-6v3c-1.7 0-3 1.3-3 3v2h3v6H6zm12 0V14c0-3.3 2.7-6 6-6v3c-1.7 0-3 1.3-3 3v2h3v6h-6z"/></svg>
+            <div class="testimonial__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial__quote">"The home-care team delivered the oxygen concentrator within two hours and set it up for my grandfather. The staff explained everything to us calmly. It made a hard week so much easier to handle."</p>
+            <strong class="testimonial__name">Divya Ramesh</strong>
+            <span class="testimonial__role">Creative Home Care · Villivakkam</span>
+          </article>
+
+          <!-- ====== TESTIMONIAL 5 ====== -->
+          <article class="testimonial">
+            <svg class="testimonial__mark" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M6 22V14c0-3.3 2.7-6 6-6v3c-1.7 0-3 1.3-3 3v2h3v6H6zm12 0V14c0-3.3 2.7-6 6-6v3c-1.7 0-3 1.3-3 3v2h3v6h-6z"/></svg>
+            <div class="testimonial__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial__quote">"I called Creative Pharmacy at 9 PM for my mother's medicines and they delivered them the very next morning. Genuine medicines, fair prices, and the team always picks up the phone. Highly recommended."</p>
+            <strong class="testimonial__name">Suresh Iyer</strong>
+            <span class="testimonial__role">Creative Pharmacy customer</span>
+          </article>
+
+          <!-- ====== Add more testimonials below by copying any block above ====== -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SECTION 9 - Appointment CTA banner
+         ===================================================== -->
+    <section class="appt-band" id="appointment-teaser">
+      <div class="container">
+        <div class="two-col reveal" style="align-items: stretch;">
+          <div style="display: flex; flex-direction: column; justify-content: center;">
+            <span class="section-label">Get in touch</span>
+            <h2>Ready to Book Your Appointment?</h2>
+            <p>Our team is available 6 days a week. Walk in or book ahead.</p>
+            <p style="color: var(--grey-600);">For emergencies, please call <a href="tel:+919600123463"><strong>96001 23463</strong></a> directly.</p>
+          </div>
+
+          <form class="appt-form-card" data-validate data-formspree action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST">
+            <!-- REPLACE: swap YOUR_FORMSPREE_ENDPOINT with the real form ID from formspree.io once you sign up -->
+            <h3 style="font-size: 1.2rem; margin-bottom: var(--space-md);">Request a Callback</h3>
+            <div class="form-field">
+              <input id="apptName" name="name" type="text" required placeholder=" " />
+              <label for="apptName">Full Name</label>
+            </div>
+            <div class="form-field">
+              <input id="apptPhone" name="phone" type="tel" required placeholder=" " />
+              <label for="apptPhone">Phone Number</label>
+            </div>
+            <div class="form-field">
+              <select id="apptDept" name="department" required>
+                <option value="" disabled selected hidden></option>
+                <option>General Medicine</option>
+                <option>Gynaecology</option>
+                <option>Neurology</option>
+                <option>Home Care</option>
+              </select>
+              <label for="apptDept">Preferred Department</label>
+            </div>
+            <button type="submit" class="btn btn--primary" style="width: 100%;">Request Callback</button>
+            <div class="form-success" role="status">
+              Thank you! We'll call you back shortly.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         SECTION 10 - Location / map teaser
+         ===================================================== -->
+    <section class="section section--off">
+      <div class="container">
+        <div class="two-col reveal">
+          <div class="info-card">
+            <span class="section-label">Visit us</span>
+            <h2 style="font-size: 1.7rem;">Find Us in Mogappair</h2>
+            <p class="footer__address" style="color: var(--grey-600);">
+              8, Thilakar St, 5th Block,<br/>
+              Mogappair West, Chennai 600037<br/>
+              Tamil Nadu, India
+            </p>
+            <p>
+              <strong>Phone:</strong>
+              <a href="tel:+919600123463">96001 23463</a> &middot;
+              <a href="tel:+917397391156">73973 91156</a><br/>
+              <strong>Email:</strong>
+              <!-- REPLACE: change info@dynamichealthcare.in to the real address when ready -->
+              <a href="mailto:info@dynamichealthcare.in">info@dynamichealthcare.in</a>
+            </p>
+
+            <h4>Clinic Hours</h4>
+            <table class="hours">
+              <tr><td>Mon &ndash; Sat</td><td>9:00 AM &ndash; 1:00 PM &nbsp;&middot;&nbsp; 4:00 PM &ndash; 8:00 PM</td></tr>
+              <tr><td>Sunday</td><td>9:00 AM &ndash; 12:00 PM (Emergency only)</td></tr>
+            </table>
+          </div>
+
+          <iframe class="map-frame"
+            src="https://maps.google.com/maps?q=mogappair%20west%20chennai%20600037&output=embed"
+            title="Map showing the clinic location in Mogappair West, Chennai"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================
+       SHARED FOOTER
+       ===================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="index.html" class="footer__logo-link" aria-label="Dynamic Health Care home">
+            <img src="assets/images/logo-with-name.png" class="footer__logo" alt="Dynamic Health Care" />
+          </a>
+          <p class="footer__tagline">Trusted Healthcare For Your Family</p>
+          <p class="footer__address">
+            8, Thilakar St, 5th Block,<br/>
+            Mogappair West, Chennai 600037<br/>
+            <a href="https://maps.google.com/maps?q=mogappair+west+chennai+600037" target="_blank" rel="noopener">View on Google Maps &rarr;</a>
+          </p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="general-medicine.html">Services</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#" aria-disabled="true">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Services</h4>
+          <ul>
+            <li><a href="general-medicine.html">General Medicine</a></li>
+            <li><a href="gynaecology.html">Gynaecology</a></li>
+            <li><a href="neurology.html">Neurology</a></li>
+            <li><a href="home-care.html#pharmacy">Pharmacy at Home</a></li>
+            <li><a href="home-care.html#equipment">Medical Equipment</a></li>
+            <li><a href="home-care.html#investigations">Investigations at Home</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+919600123463">96001 23463</a></li>
+            <li><a href="tel:+917397391156">73973 91156</a></li>
+            <!-- REPLACE: email placeholder -->
+            <li><a href="mailto:info@dynamichealthcare.in">info@dynamichealthcare.in</a></li>
+          </ul>
+          <div class="social-row" aria-label="Follow us on social media">
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M13 22v-8h3l1-4h-4V7.5c0-1.1.4-2 2-2h2V2.1c-.3 0-1.5-.1-2.7-.1-2.7 0-4.6 1.7-4.6 4.7V10H7v4h3v8h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.5-1.3.9-.4.4-.7.8-.9 1.3-.2.4-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.5.9.9 1.3.4.4.8.7 1.3.9.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.5 1.3-.9.4-.4.7-.8.9-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.5-.9-.9-1.3-.4-.4-.8-.7-1.3-.9-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 3a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 8.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zm5.4-8.4a1.2 1.2 0 1 1 0-2.4 1.2 1.2 0 0 1 0 2.4z"/></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4a2.5 2.5 0 0 0-1.8 1.8C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3z"/></svg>
+            </a>
+          </div>
+          <a href="https://wa.me/917397391156" class="footer__whatsapp" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20 3.5A11 11 0 0 0 3.7 18l-1.5 5.5 5.6-1.5A11 11 0 1 0 20 3.5zM12 21a8.9 8.9 0 0 1-4.6-1.3l-.3-.2-3.3.9.9-3.2-.2-.3a8.9 8.9 0 1 1 7.5 4.1zm5-6.7c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.1.2-.3.2-.6.1a7.4 7.4 0 0 1-3.7-3.2c-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3 0 1.3 1 2.6 1.1 2.8.1.2 2 3 4.7 4.2 1.7.7 2.3.7 3.1.6.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3 0-.1-.3-.2-.6-.3z"/></svg>
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="footer__copy">
+        <span>&copy; <span id="copyYear">2025</span> Dynamic Health Care. All rights reserved.</span>
+        <span>Designed for Dynamic Health Care by Creative Dynamic Health Care</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================
+       SHARED: WhatsApp FAB + Medical Bot
+       ===================================================== -->
+  <a class="fab-whatsapp" href="https://wa.me/917397391156" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M20 3.5A11 11 0 0 0 3.7 18l-1.5 5.5 5.6-1.5A11 11 0 1 0 20 3.5zM12 21a8.9 8.9 0 0 1-4.6-1.3l-.3-.2-3.3.9.9-3.2-.2-.3a8.9 8.9 0 1 1 7.5 4.1zm5-6.7c-.3-.1-1.6-.8-1.8-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.1.2-.3.2-.6.1a7.4 7.4 0 0 1-3.7-3.2c-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3 0 1.3 1 2.6 1.1 2.8.1.2 2 3 4.7 4.2 1.7.7 2.3.7 3.1.6.5-.1 1.6-.6 1.8-1.3.2-.6.2-1.2.2-1.3 0-.1-.3-.2-.6-.3z"/></svg>
+    <span class="fab-whatsapp__tip">Chat with us on WhatsApp</span>
+  </a>
+
+  <a class="med-bot" href="contact.html" aria-label="Open contact page">
+    <svg viewBox="0 0 64 64" fill="none" stroke="#0D2B45" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <!-- antenna -->
+      <line x1="32" y1="6" x2="32" y2="12"/>
+      <circle cx="32" cy="5" r="2" fill="#4DB8B8" stroke="none"/>
+      <!-- head -->
+      <rect x="12" y="12" width="40" height="32" rx="8" fill="white"/>
+      <!-- medical cross badge -->
+      <rect x="28" y="16" width="8" height="8" rx="1.5" fill="#4DB8B8" stroke="none"/>
+      <rect x="30" y="14" width="4" height="12" fill="white" stroke="none"/>
+      <rect x="26" y="18" width="12" height="4" fill="white" stroke="none"/>
+      <!-- eyes -->
+      <circle class="med-bot__eye" cx="24" cy="32" r="2.4" fill="#0D2B45" stroke="none"/>
+      <circle class="med-bot__eye" cx="40" cy="32" r="2.4" fill="#0D2B45" stroke="none"/>
+      <!-- smile -->
+      <path d="M26 38 Q32 42 38 38"/>
+      <!-- body -->
+      <rect x="18" y="44" width="28" height="14" rx="4" fill="white"/>
+      <line x1="32" y1="48" x2="32" y2="56"/>
+    </svg>
+    <span class="med-bot__bubble">How can I help you today?</span>
+  </a>
+
+  <script>document.getElementById('copyYear').textContent = new Date().getFullYear();</script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
